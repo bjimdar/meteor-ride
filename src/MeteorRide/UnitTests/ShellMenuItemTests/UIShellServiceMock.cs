@@ -1,9 +1,4 @@
-﻿/***************************************************************************
-
-
-***************************************************************************/
-
-using Microsoft.VisualStudio;
+﻿using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VsSDK.UnitTestLibrary;
 using System;

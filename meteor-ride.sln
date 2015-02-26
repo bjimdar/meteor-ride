@@ -5,8 +5,10 @@ VisualStudioVersion = 14.0.22512.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DF16F66B-5CF3-45F8-93CA-39A18C42A95D}"
 	ProjectSection(SolutionItems) = preProject
+		appveyor.yml = appveyor.yml
 		dont-README-yet.md = dont-README-yet.md
 		src\IntegrationTests.testsettings = src\IntegrationTests.testsettings
+		README.md = README.md
 		src\UnitTests.testsettings = src\UnitTests.testsettings
 	EndProjectSection
 EndProject
