@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Vectria.MeteorRide_UnitTests</RootNamespace>
     <AssemblyName>MeteorRide_UnitTests</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -38,7 +38,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.OLE.Interop" />
-    <Reference Include="Microsoft.VisualStudio.Shell.12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualStudio.Shell.Interop" />
     <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0" />
     <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0" />
@@ -46,6 +45,7 @@
     <Reference Include="Microsoft.VisualStudio.Shell.Interop.11.0">
       <EmbedInteropTypes>true</EmbedInteropTypes>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.14.0" />
     <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0" />
     <Reference Include="Microsoft.VisualStudio.Shell.Immutable.11.0" />
     <!---->
@@ -59,22 +59,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PackageTest.cs" />
     <!---->
-    <Compile Include="ShellMenuItemTests\ShellMenuItemCallback.cs" />
-    <Compile Include="ShellMenuItemTests\UIShellServiceMock.cs" />
+    <Compile Include="..\..\MeteorRide\UnitTests\PackageTest.cs">
+      <Link>PackageTest.cs</Link>
+    </Compile>
     <!---->
     <!---->
-    <Compile Include="ShellWindowTests\ShellWindow.cs" />
-    <Compile Include="ShellWindowTests\ShowShellWindow.cs" />
-    <Compile Include="ShellWindowTests\WindowFrameMock.cs" />
-    <Compile Include="ShellWindowTests\UIShellServiceMock.cs" />
+    <Compile Include="..\..\MeteorRide\UnitTests\ShellMenuItemTests\ShellMenuItemCallback.cs">
+      <Link>ShellMenuItemTests\ShellMenuItemCallback.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MeteorRide\UnitTests\ShellMenuItemTests\UIShellServiceMock.cs">
+      <Link>ShellMenuItemTests\UIShellServiceMock.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MeteorRide\UnitTests\ShellWindowTests\ShellWindow.cs">
+      <Link>ShellWindowTests\ShellWindow.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MeteorRide\UnitTests\ShellWindowTests\ShowShellWindow.cs">
+      <Link>ShellWindowTests\ShowShellWindow.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MeteorRide\UnitTests\ShellWindowTests\UIShellServiceMock.cs">
+      <Link>ShellWindowTests\UIShellServiceMock.cs</Link>
+    </Compile>
+    <Compile Include="..\..\MeteorRide\UnitTests\ShellWindowTests\WindowFrameMock.cs">
+      <Link>ShellWindowTests\WindowFrameMock.cs</Link>
+    </Compile>
     <!---->
     <!---->
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MeteorRide.csproj">
-      <Project>{e5f1ffdc-e2ba-4bf1-9248-3c3d90c5062e}</Project>
+      <Project>{a66c501a-29f4-44d5-b2ae-b98f0ed64537}</Project>
       <Name>MeteorRide</Name>
     </ProjectReference>
   </ItemGroup>

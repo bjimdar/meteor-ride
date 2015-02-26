@@ -4,7 +4,7 @@ using System;
 
 namespace Vectria.MeteorRide
 {
-    static class GuidList
+    public static class GuidList
     {
         public const string guidMeteorRidePkgString = "03911356-10c1-492c-bb0f-b5d3586ad3c9";
         public const string guidMeteorRideCmdSetString = "d4be4c0c-d7c4-435d-a6d1-020dedd1e52b";

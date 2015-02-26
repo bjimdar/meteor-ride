@@ -11,7 +11,7 @@ namespace MeteorRide_UnitTests.ShellMenuItemTests
 	[TestClass()]
 	public class ShellMenuItemTest
 	{
-		string MeteorExplorerMenu_MethodName = "MeteorExplorerMenuCallback";
+		//string MeteorExplorerMenu_MethodName = "MeteorExplorerMenuCallback";
 
 		/// <summary>
 		/// Verify that a new "Show Meteor Shell" menu command object gets added to the OleMenuCommandService. 
