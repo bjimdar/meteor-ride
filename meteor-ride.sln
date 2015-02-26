@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22512.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DF16F66B-5CF3-45F8-93CA-39A18C42A95D}"
+	ProjectSection(SolutionItems) = preProject
+		dont-README-yet.md = dont-README-yet.md
+		src\IntegrationTests.testsettings = src\IntegrationTests.testsettings
+		src\UnitTests.testsettings = src\UnitTests.testsettings
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5C8E4E3F-4CAE-4362-A8DF-0760C8C1D3CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeteorRide", "src\MeteorRide\MeteorRide.csproj", "{A66C501A-29F4-44D5-B2AE-B98F0ED64537}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeteorRide_UnitTests", "src\MeteorRide\UnitTests\MeteorRide_UnitTests.csproj", "{23D4C899-F163-4516-9804-76B4F0B50B8B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A66C501A-29F4-44D5-B2AE-B98F0ED64537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A66C501A-29F4-44D5-B2AE-B98F0ED64537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A66C501A-29F4-44D5-B2AE-B98F0ED64537}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A66C501A-29F4-44D5-B2AE-B98F0ED64537}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23D4C899-F163-4516-9804-76B4F0B50B8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23D4C899-F163-4516-9804-76B4F0B50B8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23D4C899-F163-4516-9804-76B4F0B50B8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23D4C899-F163-4516-9804-76B4F0B50B8B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{23D4C899-F163-4516-9804-76B4F0B50B8B} = {5C8E4E3F-4CAE-4362-A8DF-0760C8C1D3CD}
+	EndGlobalSection
+EndGlobal
