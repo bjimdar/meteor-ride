@@ -70,7 +70,7 @@ namespace Vectria.MeteorRide {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Meteor Explorer.
+        ///   Looks up a localized string similar to Meteor ExploreR.
         /// </summary>
         internal static string ExplorerWindowTitle {
             get {
@@ -84,6 +84,15 @@ namespace Vectria.MeteorRide {
         internal static string ShellWindowTitle {
             get {
                 return ResourceManager.GetString("ShellWindowTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Test1.
+        /// </summary>
+        internal static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
             }
         }
     }

@@ -122,11 +122,15 @@
     <comment>Text for Error dialog shown when tool window breaks</comment>
   </data>
   <data name="ExplorerWindowTitle" xml:space="preserve">
-    <value>Meteor Explorer</value>
+    <value>Meteor ExploreR</value>
     <comment>Title Bar test for Meteor Explorer tool window</comment>
   </data>
   <data name="ShellWindowTitle" xml:space="preserve">
     <value>Meteor Shell</value>
     <comment>Title bar text for Meteor Shell Window</comment>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>Test1</value>
+    <comment>Fake resource...</comment>
   </data>
 </root>

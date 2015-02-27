@@ -1,0 +1,1 @@
+This project includes mostly linked files from the ../MeteorRide directory with any vs2015 specific code being in a local file here.
