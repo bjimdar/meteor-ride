@@ -18,7 +18,7 @@
     <AssemblyName>MeteorRide</AssemblyName>
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>..\ProductionSigning-Key.snk</AssemblyOriginatorKeyFile>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,24 +39,41 @@
     <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Build, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Build.Engine, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Build.Framework, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Build.Tasks.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Build.Utilities.v12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.VisualStudio.OLE.Interop" />
+    <Reference Include="Microsoft.VisualStudio.Designer.Interfaces, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.ProjectAggregator, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.Shell.12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop" />
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0" />
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0" />
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop.10.0" />
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop.11.0">
-      <EmbedInteropTypes>true</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop.12.0">
-      <EmbedInteropTypes>true</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.TextManager.Interop" />
     <Reference Include="Microsoft.VisualStudio.Shell.$(VisualStudioVersion)" />
-    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0" />
-    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.11.0" />
-    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.12.0" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Design, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.VSHelp, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
@@ -66,6 +83,12 @@
     <Reference Include="System.Xml" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="VSLangProj, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="VSLangProj80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="System.Xaml" />
   </ItemGroup>
@@ -86,7 +109,7 @@
       <Lcid>0</Lcid>
       <WrapperTool>primary</WrapperTool>
       <Isolated>False</Isolated>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
     <COMReference Include="EnvDTE80">
       <Guid>{1A31287A-4D7D-413E-8E32-3B374931BD89}</Guid>
@@ -104,7 +127,7 @@
       <Lcid>0</Lcid>
       <WrapperTool>primary</WrapperTool>
       <Isolated>False</Isolated>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
     <COMReference Include="Microsoft.VisualStudio.CommandBars">
       <Guid>{1CBA492E-7263-47BB-87FE-639000619B15}</Guid>
@@ -130,14 +153,114 @@
       <DependentUpon>ExplorerControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ExplorerWindow.cs" />
+    <Compile Include="Helpers\ResourceCategoryAttribute.cs" />
+    <Compile Include="Helpers\ResourceDescriptionAttribute.cs" />
     <Compile Include="MeteorShellControl.xaml.cs">
       <DependentUpon>MeteorShellControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="MeteorShellWindow.cs" />
     <Compile Include="Guids.cs" />
-    <Compile Include="OptionsPage.cs">
+    <Compile Include="Project\ProjectBase\Automation\AutomationScope.cs" />
+    <Compile Include="Project\ProjectBase\Automation\OAFileItem.cs" />
+    <Compile Include="Project\ProjectBase\Automation\OAFolderItem.cs" />
+    <Compile Include="Project\ProjectBase\Automation\OANavigableProjectItems.cs" />
+    <Compile Include="Project\ProjectBase\Automation\OANestedProjectItem.cs" />
+    <Compile Include="Project\ProjectBase\Automation\OANullProperty.cs" />
+    <Compile Include="Project\ProjectBase\Automation\OAProject.cs" />
+    <Compile Include="Project\ProjectBase\Automation\OAProjectItem.cs" />
+    <Compile Include="Project\ProjectBase\Automation\OAProjectItems.cs" />
+    <Compile Include="Project\ProjectBase\Automation\OAProperties.cs" />
+    <Compile Include="Project\ProjectBase\Automation\OAProperty.cs" />
+    <Compile Include="Project\ProjectBase\Automation\OAReferenceFolderItem.cs" />
+    <Compile Include="Project\ProjectBase\Automation\OAReferenceItem.cs" />
+    <Compile Include="Project\ProjectBase\Automation\OASolutionFolder.cs" />
+    <Compile Include="Project\ProjectBase\Automation\VSProject\OAAssemblyReference.cs" />
+    <Compile Include="Project\ProjectBase\Automation\VSProject\OABuildManager.cs" />
+    <Compile Include="Project\ProjectBase\Automation\VSProject\OAComReference.cs" />
+    <Compile Include="Project\ProjectBase\Automation\VSProject\OAProjectReference.cs" />
+    <Compile Include="Project\ProjectBase\Automation\VSProject\OAReferenceBase.cs" />
+    <Compile Include="Project\ProjectBase\Automation\VSProject\OAReferences.cs" />
+    <Compile Include="Project\ProjectBase\Automation\VSProject\OAVSProject.cs" />
+    <Compile Include="Project\ProjectBase\Automation\VSProject\OAVSProjectItem.cs" />
+    <Compile Include="Settings\OptionsPage.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Project\MeteorFileNode.cs" />
+    <Compile Include="Project\MeteorProjectFactory.cs" />
+    <Compile Include="Project\MeteorProjectAutomation.cs" />
+    <Compile Include="Project\MeteorProjectNode.cs" />
+    <Compile Include="Project\ProjectBase\AssemblyReferenceNode.cs" />
+    <Compile Include="Project\ProjectBase\Attributes.cs" />
+    <Compile Include="Project\ProjectBase\BuildDependency.cs" />
+    <Compile Include="Project\ProjectBase\BuildPropertyPage.cs" />
+    <Compile Include="Project\ProjectBase\ComReferenceNode.cs" />
+    <Compile Include="Project\ProjectBase\ConfigProvider.cs" />
+    <Compile Include="Project\ProjectBase\ConfigurationProperties.cs" />
+    <Compile Include="Project\ProjectBase\DataObject.cs" />
+    <Compile Include="Project\ProjectBase\DependentFileNode.cs" />
+    <Compile Include="Project\ProjectBase\DesignPropertyDescriptor.cs" />
+    <Compile Include="Project\ProjectBase\DesignTimeAssemblyResolution.cs" />
+    <Compile Include="Project\ProjectBase\DocumentManager.cs" />
+    <Compile Include="Project\ProjectBase\EnumDependencies.cs" />
+    <Compile Include="Project\ProjectBase\FileChangeManager.cs" />
+    <Compile Include="Project\ProjectBase\FileDocumentManager.cs" />
+    <Compile Include="Project\ProjectBase\FileNode.cs" />
+    <Compile Include="Project\ProjectBase\FolderNode.cs" />
+    <Compile Include="Project\ProjectBase\GlobalSuppressions.cs" />
+    <Compile Include="Project\ProjectBase\HierarchyNode.cs" />
+    <Compile Include="Project\ProjectBase\IDEBuildLogger.cs" />
+    <Compile Include="Project\ProjectBase\ImageHandler.cs" />
+    <Compile Include="Project\ProjectBase\Interfaces.cs" />
+    <Compile Include="Project\ProjectBase\LocalizableProperties.cs" />
+    <Compile Include="Project\ProjectBase\misc\ConnectionPointContainer.cs" />
+    <Compile Include="Project\ProjectBase\misc\ExternDll.cs" />
+    <Compile Include="Project\ProjectBase\misc\NativeMethods.cs" />
+    <Compile Include="Project\ProjectBase\misc\UnsafeNativeMethods.cs" />
+    <Compile Include="Project\ProjectBase\NestedProjectBuildDependency.cs" />
+    <Compile Include="Project\ProjectBase\NestedProjectNode.cs" />
+    <Compile Include="Project\ProjectBase\NodeProperties.cs" />
+    <Compile Include="Project\ProjectBase\OleServiceProvider.cs" />
+    <Compile Include="Project\ProjectBase\Output.cs" />
+    <Compile Include="Project\ProjectBase\OutputGroup.cs" />
+    <Compile Include="Project\ProjectBase\ProjectConfig.cs" />
+    <Compile Include="Project\ProjectBase\ProjectContainerNode.cs" />
+    <Compile Include="Project\ProjectBase\ProjectDesignerDocumentManager.cs" />
+    <Compile Include="Project\ProjectBase\ProjectDocumentsListener.cs" />
+    <Compile Include="Project\ProjectBase\ProjectElement.cs" />
+    <Compile Include="Project\ProjectBase\ProjectFactory.cs" />
+    <Compile Include="Project\ProjectBase\ProjectFileConstants.cs" />
+    <Compile Include="Project\ProjectBase\ProjectNode.CopyPaste.cs" />
+    <Compile Include="Project\ProjectBase\ProjectNode.cs" />
+    <Compile Include="Project\ProjectBase\ProjectNode.Events.cs" />
+    <Compile Include="Project\ProjectBase\ProjectOptions.cs" />
+    <Compile Include="Project\ProjectBase\ProjectPackage.cs" />
+    <Compile Include="Project\ProjectBase\ProjectReferenceNode.cs" />
+    <Compile Include="Project\ProjectBase\PropertiesEditorLauncher.cs" />
+    <Compile Include="Project\ProjectBase\ReferenceContainerNode.cs" />
+    <Compile Include="Project\ProjectBase\ReferenceNode.cs" />
+    <Compile Include="Project\ProjectBase\RegisteredProjectType.cs" />
+    <Compile Include="Project\ProjectBase\SelectionListener.cs" />
+    <Compile Include="Project\ProjectBase\SettingsPage.cs" />
+    <Compile Include="Project\ProjectBase\SingleFileGenerator.cs" />
+    <Compile Include="Project\ProjectBase\SingleFileGeneratorFactory.cs" />
+    <Compile Include="Project\ProjectBase\SolutionListener.cs" />
+    <Compile Include="Project\ProjectBase\SolutionListenerForBuildDependencyUpdate.cs" />
+    <Compile Include="Project\ProjectBase\SolutionListenerForProjectEvents.cs" />
+    <Compile Include="Project\ProjectBase\SolutionListenerForProjectOpen.cs" />
+    <Compile Include="Project\ProjectBase\SolutionListenerForProjectReferenceUpdate.cs" />
+    <Compile Include="Project\ProjectBase\StructuresEnums.cs" />
+    <Compile Include="Project\ProjectBase\SuspendFileChanges.cs" />
+    <Compile Include="Project\ProjectBase\TokenProcessor.cs" />
+    <Compile Include="Project\ProjectBase\Tracing.cs" />
+    <Compile Include="Project\ProjectBase\TrackDocumentsHelper.cs" />
+    <Compile Include="Project\ProjectBase\TypeConverters.cs" />
+    <Compile Include="Project\ProjectBase\UIThread.cs" />
+    <Compile Include="Project\ProjectBase\UpdateSolutionEventsListener.cs" />
+    <Compile Include="Project\ProjectBase\Url.cs" />
+    <Compile Include="Project\ProjectBase\Utilities.cs" />
+    <Compile Include="Project\ProjectBase\VisualStudio.Project.cs" />
+    <Compile Include="Project\ProjectBase\VsCommands.cs" />
+    <Compile Include="Project\ProjectBase\VSShellUtilities.cs" />
     <Compile Include="Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -147,13 +270,19 @@
     <Compile Include="MeteorPackage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PkgCmdID.cs" />
+    <Compile Include="Resources\ResourceHelper.cs" />
+    <Compile Include="Settings\GeneralSettingsPage.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Project\ProjectBase\VisualStudio.Project.resx">
+      <DependentUpon>VisualStudio.Project.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="VisualStudio.Project.resx" />
     <EmbeddedResource Include="VSPackage.resx">
       <MergeWithCTO>true</MergeWithCTO>
       <ManifestResourceName>VSPackage</ManifestResourceName>
@@ -163,23 +292,31 @@
     <None Include="..\ProductionSigning-Key.snk">
       <Link>ProductionSigning-Key.snk</Link>
     </None>
+    <None Include="extension.vsixmanifest" />
+    <None Include="Project\ProjectBase\Diagrams\AutomationClasses.cd" />
+    <None Include="Project\ProjectBase\Diagrams\ConfigurationClasses.cd" />
+    <None Include="Project\ProjectBase\Diagrams\DocumentManagerClasses.cd" />
+    <None Include="Project\ProjectBase\Diagrams\HierarchyClasses.cd" />
+    <None Include="Project\ProjectBase\Diagrams\PropertiesClasses.cd" />
+    <None Include="Project\ProjectBase\Diagrams\ReferenceClasses.cd" />
     <None Include="source.extension.vsixmanifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Templates\Projects\MeteorProject\MeteorProject.meteorride">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <VSCTCompile Include="MeteorPackage.vsct">
-      <ResourceName>Menus.ctmenu</ResourceName>
-    </VSCTCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Images.png" />
+    <EmbeddedResource Include="Resources\Images.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="LICENSE.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <EmbeddedResource Include="Resources\imagelis.bmp" />
+    <EmbeddedResource Include="Resources\MeteorProjectImageList.bmp" />
+    <Content Include="Templates\ProjectItems\MeteorProject\template.js" />
     <Content Include="Resources\Package.ico" />
     <Resource Include="runtime.rd.xml" />
   </ItemGroup>
@@ -193,6 +330,7 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <UseCodebase>true</UseCodebase>
   </PropertyGroup>

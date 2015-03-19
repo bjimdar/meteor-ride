@@ -14,11 +14,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5C8E4E3F-4CAE-4362-A8DF-0760C8C1D3CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeteorRide", "src\MeteorRide-VS2015\MeteorRide.csproj", "{A66C501A-29F4-44D5-B2AE-B98F0ED64537}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeteorRide_UnitTests", "src\MeteorRide-VS2015\UnitTests\MeteorRide_UnitTests.csproj", "{23D4C899-F163-4516-9804-76B4F0B50B8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSPackage1", "src\deleteme\VSPackage1\VSPackage1.csproj", "{E5F1FFDC-E2BA-4BF1-9248-3C3D90C5062E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeteorRide", "src\MeteorRide-VS2015\MeteorRide.csproj", "{A66C501A-29F4-44D5-B2AE-B98F0ED64537}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,17 +24,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A66C501A-29F4-44D5-B2AE-B98F0ED64537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A66C501A-29F4-44D5-B2AE-B98F0ED64537}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A66C501A-29F4-44D5-B2AE-B98F0ED64537}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A66C501A-29F4-44D5-B2AE-B98F0ED64537}.Release|Any CPU.Build.0 = Release|Any CPU
 		{23D4C899-F163-4516-9804-76B4F0B50B8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{23D4C899-F163-4516-9804-76B4F0B50B8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23D4C899-F163-4516-9804-76B4F0B50B8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23D4C899-F163-4516-9804-76B4F0B50B8B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E5F1FFDC-E2BA-4BF1-9248-3C3D90C5062E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E5F1FFDC-E2BA-4BF1-9248-3C3D90C5062E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E5F1FFDC-E2BA-4BF1-9248-3C3D90C5062E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A66C501A-29F4-44D5-B2AE-B98F0ED64537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A66C501A-29F4-44D5-B2AE-B98F0ED64537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A66C501A-29F4-44D5-B2AE-B98F0ED64537}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A66C501A-29F4-44D5-B2AE-B98F0ED64537}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

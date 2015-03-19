@@ -61,6 +61,60 @@ namespace Vectria.MeteorRide {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Application.
+        /// </summary>
+        internal static string Application {
+            get {
+                return ResourceManager.GetString("Application", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ApplicationDescription.
+        /// </summary>
+        internal static string ApplicationDescription {
+            get {
+                return ResourceManager.GetString("ApplicationDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ApplicationIcon.
+        /// </summary>
+        internal static string ApplicationIcon {
+            get {
+                return ResourceManager.GetString("ApplicationIcon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sets the .ico file to use as your application icon..
+        /// </summary>
+        internal static string ApplicationIconDescription {
+            get {
+                return ResourceManager.GetString("ApplicationIconDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Assembly Name.
+        /// </summary>
+        internal static string AssemblyName {
+            get {
+                return ResourceManager.GetString("AssemblyName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The name of the output file that will hold assembly metadata..
+        /// </summary>
+        internal static string AssemblyNameDescription {
+            get {
+                return ResourceManager.GetString("AssemblyNameDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Can not create tool window..
         /// </summary>
         internal static string CanNotCreateWindow {
@@ -70,11 +124,119 @@ namespace Vectria.MeteorRide {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Meteor ExploreR.
+        ///   Looks up a localized string similar to Default Namespace.
+        /// </summary>
+        internal static string DefaultNamespace {
+            get {
+                return ResourceManager.GetString("DefaultNamespace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Specifies the default namespace for added items, such as classes, that are added via the Add New Item Dialog Box..
+        /// </summary>
+        internal static string DefaultNamespaceDescription {
+            get {
+                return ResourceManager.GetString("DefaultNamespaceDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Meteor Explorer.
         /// </summary>
         internal static string ExplorerWindowTitle {
             get {
                 return ResourceManager.GetString("ExplorerWindowTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to General.
+        /// </summary>
+        internal static string GeneralCaption {
+            get {
+                return ResourceManager.GetString("GeneralCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Output Type.
+        /// </summary>
+        internal static string OutputFile {
+            get {
+                return ResourceManager.GetString("OutputFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The type of application to build..
+        /// </summary>
+        internal static string OutputFileDescription {
+            get {
+                return ResourceManager.GetString("OutputFileDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Output Type.
+        /// </summary>
+        internal static string OutputType {
+            get {
+                return ResourceManager.GetString("OutputType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The type of application to build.
+        /// </summary>
+        internal static string OutputTypeDescription {
+            get {
+                return ResourceManager.GetString("OutputTypeDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Project.
+        /// </summary>
+        internal static string Project {
+            get {
+                return ResourceManager.GetString("Project", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Project File.
+        /// </summary>
+        internal static string ProjectFile {
+            get {
+                return ResourceManager.GetString("ProjectFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The name of the file containing build, configuration, and other information about the project..
+        /// </summary>
+        internal static string ProjectFileDescription {
+            get {
+                return ResourceManager.GetString("ProjectFileDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Project Folder.
+        /// </summary>
+        internal static string ProjectFolder {
+            get {
+                return ResourceManager.GetString("ProjectFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The absolute location of the project..
+        /// </summary>
+        internal static string ProjectFolderDescription {
+            get {
+                return ResourceManager.GetString("ProjectFolderDescription", resourceCulture);
             }
         }
         
@@ -88,11 +250,38 @@ namespace Vectria.MeteorRide {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Test1.
+        ///   Looks up a localized string similar to Startup Object.
         /// </summary>
-        internal static string String1 {
+        internal static string StartupObject {
             get {
-                return ResourceManager.GetString("String1", resourceCulture);
+                return ResourceManager.GetString("StartupObject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The name of the class that contains the static Main method that you want called when you launch your application..
+        /// </summary>
+        internal static string StartupObjectDescription {
+            get {
+                return ResourceManager.GetString("StartupObjectDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Target Framework Moniker.
+        /// </summary>
+        internal static string TargetFrameworkMoniker {
+            get {
+                return ResourceManager.GetString("TargetFrameworkMoniker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The version of the Common Language Runtime to use for output assembly..
+        /// </summary>
+        internal static string TargetFrameworkMonikerDescription {
+            get {
+                return ResourceManager.GetString("TargetFrameworkMonikerDescription", resourceCulture);
             }
         }
     }

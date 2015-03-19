@@ -87,12 +87,6 @@
     <!---->
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MeteorRide.csproj">
-      <Project>{a66c501a-29f4-44d5-b2ae-b98f0ed64537}</Project>
-      <Name>MeteorRide</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="..\..\ProductionSigning-Key.snk">
       <Link>ProductionSigning-Key.snk</Link>
     </None>

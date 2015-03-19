@@ -1,10 +1,13 @@
-﻿using Microsoft.VisualStudio.Shell;
+﻿using Microsoft.VisualStudio.Project;
+using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using System;
 using System.ComponentModel.Design;
 using System.Diagnostics;
 using System.Globalization;
 using System.Runtime.InteropServices;
+using Vectria.MeteorRide.Project;
+using Vectria.MeteorRide.Settings;
 
 namespace Vectria.MeteorRide
 {
@@ -18,24 +21,60 @@ namespace Vectria.MeteorRide
 	/// IVsPackage interface and uses the registration attributes defined in the framework to 
 	/// register itself and its components with the shell.
 	/// </summary>
+    /// 
+    /// <para>A Visual Studio component can be registered under different registry roots; for instance
+    /// when you debug your package you want to register it in the experimental hive. This
+    /// attribute specifies the registry root to use if no one is provided to regpkg.exe with
+    /// the /root switch.</para>
 	///
-	// This attribute tells the PkgDef creation utility (CreatePkgDef.exe) that this class is
-	// a package.
+	/// This attribute tells the PkgDef creation utility (CreatePkgDef.exe) 
+    /// that this class is a package.
 	[PackageRegistration(UseManagedResourcesOnly = true)]
 	///
     /// This attribute is used to register the information needed to show this package
     /// in the Help/About dialog of Visual Studio.
     [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)]
 	///
-    /// This attribute is needed to let the shell know that this package exposes some menus.
-    [ProvideMenuResource("Menus.ctmenu", 1)]
+    /// Notify loader that this package exposes some menus.
+    //[ProvideMenuResource("Menus.ctmenu", 1)]
     ///
-	/// This attribute registers a tool window exposed by this package.
-    [ProvideToolWindow(typeof(MeteorShellWindow))]
-	[ProvideToolWindow(typeof(ExplorerWindow))]
+    /// Define the default registry root for  registering the package. 
+    /// We are currently using the experimental hive.
+    //[DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\12.0")]
+    //[DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\10.0")]
+    ///
+	/// Register a tool windows exposed by this package.
+    //[ProvideToolWindow(typeof(MeteorShellWindow))]
+	//[ProvideToolWindow(typeof(ExplorerWindow))]
+    ///
+    /// Add an options section and page in the Tools > Options dialog
 	[ProvideOptionPage(typeof(OptionsPage), "Meteor Ride", "General", 101, 106, true, new[] { "Meteor Ride" })]
+    ///
+    /// Declare that this package provides creatable objects.
+    //[ProvideObject(typeof(GeneralSettingsPage))]
+    ///
+    /// Declare that a package provides a project factory.
+    //[ProvideProjectFactory(
+    //    typeof(MeteorProjectFactory), 
+    //    "Meteor Ride", 
+    //    "Meteor Ride Files (*.meteorride);*.meteorride", 
+    //    "meteorride", 
+    //    "meteorride",
+    //    @"..\..\Templates\Projects\MeteorProject"
+    //    , LanguageVsTemplate = "meteorproject", 
+    //    NewProjectRequireNewFolderVsTemplate = false
+    //    )]
+    /// 
+    /// Declare that the package provides a project item.
+    /// [ProvideProjectItem(typeof(MeteorProjectFactory), "Meteor Items", @"..\..\Templates\ProjectItems\MeteorProject", 500)]
+    
+    //[PackageRegistration(UseManagedResourcesOnly = true)]
+    [DefaultRegistryRoot("Software\\Microsoft\\VisualStudio\\10.0")]
+    [ProvideObject(typeof(GeneralSettingsPage))]
+    [ProvideProjectFactory(typeof(MeteorProjectFactory), "Meteor-Project", "Meteor Project Files (*.meteorride);*.meteorride", "meteorride", "meteorride", @"..\..\Templates\Projects", LanguageVsTemplate = "MeteorProject", NewProjectRequireNewFolderVsTemplate = false)]
+    [ProvideProjectItem(typeof(MeteorProjectFactory), "My Items", @"..\..\Templates\ProjectItems\MeteorProject", 500)]
     [Guid(GuidList.guidMeteorRidePkgString)]
-    public sealed class MeteorPackage : Package
+    public sealed class MeteorPackage : ProjectPackage
     {
         /// <summary>
         /// Default constructor of the package.
@@ -83,22 +122,29 @@ namespace Vectria.MeteorRide
             Debug.WriteLine (string.Format(CultureInfo.CurrentCulture, 
 				"Entering Initialize() of: {0}", this.ToString()));
             base.Initialize();
+            this.RegisterProjectFactory(new MeteorProjectFactory(this));
 
             // Add our command handlers for menu (commands must exist in the .vsct file)
-            OleMenuCommandService mcs = GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
-            if ( null != mcs )
-            {
-                // Create the command for the 'Show Meteor Explorer' menu item
-                CommandID meteorExplorerCmdId = new CommandID(GuidList.guidMeteorRideCmdSet, (int)PkgCmdIDList.cmdIdMeteorExplorer);
-                MenuCommand meteorExplorerMenuItem = new MenuCommand(MeteorExplorerMenuCallback, meteorExplorerCmdId);
-                mcs.AddCommand(meteorExplorerMenuItem);
+            //OleMenuCommandService mcs = GetService(typeof(IMenuCommandService)) as OleMenuCommandService;
+            //if ( null != mcs )
+            //{
+            //     Create the command for the 'Show Meteor Explorer' menu item
+            //    CommandID meteorExplorerCmdId = new CommandID(GuidList.guidMeteorRideCmdSet, (int)PkgCmdIDList.cmdIdMeteorExplorer);
+            //    MenuCommand meteorExplorerMenuItem = new MenuCommand(MeteorExplorerMenuCallback, meteorExplorerCmdId);
+            //    mcs.AddCommand(meteorExplorerMenuItem);
 
-				// Create the command for the Meteor Shell tool window
-				CommandID toolwndCommandID = new CommandID(GuidList.guidMeteorRideCmdSet, (int)PkgCmdIDList.cmdIdMeteorShell);
-                MenuCommand menuToolWin = new MenuCommand(ShowMeteorShell, toolwndCommandID);
-                mcs.AddCommand( menuToolWin );
-            }
+            //     Create the command for the Meteor Shell tool window
+            //    CommandID toolwndCommandID = new CommandID(GuidList.guidMeteorRideCmdSet, (int)PkgCmdIDList.cmdIdMeteorShell);
+            //    MenuCommand menuToolWin = new MenuCommand(ShowMeteorShell, toolwndCommandID);
+            //    mcs.AddCommand( menuToolWin );
+            //}
         }
+
+        public override string ProductUserContext
+        {
+            get { return "MeteorProj"; }
+        }
+
         #endregion
 
         /// <summary>

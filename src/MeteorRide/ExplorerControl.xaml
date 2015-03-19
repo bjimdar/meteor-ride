@@ -14,7 +14,7 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
-                <Button x:Name="button" Content="Click Me" HorizontalAlignment="Center" VerticalAlignment="Top" Width="75"/>
+                <Button x:Name="button" Content="Button" HorizontalAlignment="Center" VerticalAlignment="Top" Width="75"/>
                 <Border Background="Gray" Grid.Row="1"></Border>
             </Grid>
         </Border>
